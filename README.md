@@ -75,4 +75,4 @@ Para manter a organização do repositório, adotaremos as seguintes regras esse
 
 - **Trello**: [Quadro do Projeto no Trello](https://trello.com/b/TFdywSYa)  
 
-- **GitHub Pages**: [Certificadora de Competência Comum - GitHub Pages](https://gabrie1tk.github.io/Certificadora_Comum/)  
+- **GitHub Pages**: [Certificadora de Competência Comum - GitHub Pages](https://gabrie1tk.github.io/Certificadora_Comum/index)  
