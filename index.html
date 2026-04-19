@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Oficina do Código — Aprenda programação web front-end construindo um catálogo interativo de carros." />
+    <title>Oficina do Código | Catálogo Automotivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#" class="nav__logo">Oficina do Código</a>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" role="list">
+          <li><a href="#apresentacao">Início</a></li>
+          <li><a href="#conteudo">Conteúdo</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="apresentacao" class="hero" aria-labelledby="hero-titulo">
+        <div class="hero__content">
+          <p class="hero__tag">Recurso Educacional Aberto · UTFPR</p>
+          <h1 id="hero-titulo" class="hero__titulo">
+            Aprenda Front-End<br />construindo um catálogo<br />
+            <span class="hero__destaque">de carros do zero</span>
+          </h1>
+          <p class="hero__subtitulo">
+            HTML, CSS e JavaScript na prática — com videoaulas, exercícios e código aberto.
+          </p>
+          <a href="#conteudo" class="btn btn--primario">Começar agora</a>
+        </div>
+        
+      </section>
+
+      <section id="conteudo" class="trilha" aria-labelledby="trilha-titulo">
+        <div class="container">
+          <h2 id="trilha-titulo" class="secao__titulo">Trilha de aprendizado</h2>
+          <p class="secao__subtitulo">Quatro módulos sequenciais — do zero ao catálogo completo.</p>
+
+          <ol class="trilha__lista" role="list">
+
+            <article class="modulo" aria-labelledby="mod1-titulo">
+              <div class="modulo__numero" aria-hidden="true">01</div>
+              <div class="modulo__corpo">
+                <h3 id="mod1-titulo" class="modulo__titulo">HTML e Semântica</h3>
+                <p class="modulo__desc">Estrutura de páginas, tags semânticas, acessibilidade e SEO.</p>
+                <div class="modulo__video">
+                  <div class="video__placeholder" aria-label="Vídeo da Aula 1 em breve">Em breve</div>
+                </div>
+                <a href="exercicios/aula-01-html/enunciado.html" class="btn btn--secundario" target="_blank" rel="noopener">
+                  Ver exercícios
+                </a>
+              </div>
+            </article>
+
+            <article class="modulo" aria-labelledby="mod2-titulo">
+              <div class="modulo__numero" aria-hidden="true">02</div>
+              <div class="modulo__corpo">
+                <h3 id="mod2-titulo" class="modulo__titulo">CSS e Layout</h3>
+                <p class="modulo__desc">Estilização, Flexbox, Grid e design responsivo com media queries.</p>
+                <div class="modulo__video">
+                  <div class="video__placeholder" aria-label="Vídeo da Aula 2 em breve">Em breve</div>
+                </div>
+                <a href="exercicios/aula-02-css/enunciado.html" class="btn btn--secundario" target="_blank" rel="noopener">
+                  Ver exercícios
+                </a>
+              </div>
+            </article>
+
+            <article class="modulo" aria-labelledby="mod3-titulo">
+              <div class="modulo__numero" aria-hidden="true">03</div>
+              <div class="modulo__corpo">
+                <h3 id="mod3-titulo" class="modulo__titulo">JavaScript e DOM</h3>
+                <p class="modulo__desc">Manipulação do DOM, eventos e filtro de categorias em tempo real.</p>
+                <div class="modulo__video">
+                  <div class="video__placeholder" aria-label="Vídeo da Aula 3 em breve">Em breve</div>
+                </div>
+                <a href="exercicios/aula-03-js/enunciado.html" class="btn btn--secundario" target="_blank" rel="noopener">
+                  Ver exercícios
+                </a>
+              </div>
+            </article>
+
+            <article class="modulo" aria-labelledby="mod4-titulo">
+              <div class="modulo__numero" aria-hidden="true">04</div>
+              <div class="modulo__corpo">
+                <h3 id="mod4-titulo" class="modulo__titulo">localStorage</h3>
+                <p class="modulo__desc">Persistência de dados no navegador — favoritos que não somem.</p>
+                <div class="modulo__video">
+                  <div class="video__placeholder" aria-label="Vídeo da Aula 4 em breve">Em breve</div>
+                </div>
+                <a href="exercicios/aula-04-localstorage/enunciado.html" class="btn btn--secundario" target="_blank" rel="noopener">
+                  Ver exercícios
+                </a>
+              </div>
+            </article>
+
+          </ol>
+        </div>
+      </section>
+
+      <section id="catalogo" class="catalogo" aria-labelledby="catalogo-titulo">
+        <div class="container">
+          <h2 id="catalogo-titulo" class="secao__titulo">Catálogo de carros</h2>
+          <p class="secao__subtitulo">O projeto que você vai construir aula a aula.</p>
+
+          <div class="filtros" role="group" aria-label="Filtrar por categoria">
+            <button class="filtro ativo" data-categoria="todos" aria-pressed="true">Todos</button>
+            <button class="filtro" data-categoria="sedan" aria-pressed="false">Sedã</button>
+            <button class="filtro" data-categoria="suv" aria-pressed="false">SUV</button>
+            <button class="filtro" data-categoria="hatch" aria-pressed="false">Hatch</button>
+            <button class="filtro" data-categoria="esportivo" aria-pressed="false">Esportivo</button>
+            <button class="filtro" data-categoria="favoritos" aria-pressed="false">Favoritos</button>
+          </div>
+
+          <div id="grade-carros" class="grade" role="list" aria-live="polite" aria-label="Lista de carros">
+          </div>
+
+          <p id="sem-resultados" class="sem-resultados" hidden>
+            Nenhum carro encontrado nesta categoria.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato" class="contato" aria-labelledby="contato-titulo">
+        <div class="container">
+          <h2 id="contato-titulo" class="secao__titulo">Equipe</h2>
+          <p class="secao__subtitulo">Desenvolvido por estudantes da UTFPR — Campus Cornélio Procópio.</p>
+
+          <ul class="equipe" role="list">
+
+            <li class="membro">
+              <div class="membro__avatar" aria-hidden="true">AD</div>
+              <h3 class="membro__nome">Adryann Luiz</h3>
+              <div class="membro__links">
+                <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub de Adryann">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Adryann">LinkedIn</a>
+              </div>
+            </li>
+
+            <li class="membro">
+              <div class="membro__avatar" aria-hidden="true">GT</div>
+              <h3 class="membro__nome">Gabriel Takao</h3>
+              <div class="membro__links">
+                <a href="https://github.com/Gabrie1Tk" target="_blank" rel="noopener" aria-label="GitHub de Gabriel">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Gabriel">LinkedIn</a>
+              </div>
+            </li>
+
+            <li class="membro">
+              <div class="membro__avatar" aria-hidden="true">LG</div>
+              <h3 class="membro__nome">Luiz Gustavo</h3>
+              <div class="membro__links">
+                <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub de Luiz Gustavo">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Luiz Gustavo">LinkedIn</a>
+              </div>
+            </li>
+
+            <li class="membro">
+              <div class="membro__avatar" aria-hidden="true">PF</div>
+              <h3 class="membro__nome">Paulo Felipe</h3>
+              <div class="membro__links">
+                <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub de Paulo Felipe">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Paulo Felipe">LinkedIn</a>
+              </div>
+            </li>
+
+            <li class="membro">
+              <div class="membro__avatar" aria-hidden="true">VC</div>
+              <h3 class="membro__nome">Vinicius Campeão</h3>
+              <div class="membro__links">
+                <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub de Vinicius">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Vinicius">LinkedIn</a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="rodape">
+      <div class="container">
+        <p>Oficina do Código · UTFPR Cornélio Procópio · 2025</p>
+        <p>
+          <a href="https://github.com/Gabrie1Tk/Certificadora_Comum" target="_blank" rel="noopener">
+            Código aberto no GitHub
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
