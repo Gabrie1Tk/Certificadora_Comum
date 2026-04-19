@@ -65,8 +65,8 @@ Adotaremos o Scrum e Kanban como metodologia ágil do projeto, com ênfase no us
 Para manter a organização do repositório, adotaremos as seguintes regras essenciais:
 
 **Nomenclatura:** Utilize sempre hifens para criar arquivos (ex: `catalogo-carros.html`). Ao criar pastas, dê preferência a apenas uma palavra ou utilize hifens. <br>
-**Commits:** Mensagens claras e descritivas usando verbos no imperativo. A estrutura deve indicar o tipo de mudança (feat, fix, docs, style, refactor, test) e possuir um título de até 50 caracteres.<br>
-*Exemplo:* `feat: adicionar filtro de categorias em js`<br>
+**Commits:** Mensagens claras e descritivas usando verbos no imperativo.<br>
+*Exemplo:* `adicionar filtro de categorias em js`<br>
 **Tamanho dos Commits:** Realize commits pequenos e focados em uma única funcionalidade para facilitar revisões.
 
 ---
