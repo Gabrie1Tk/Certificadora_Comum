@@ -49,12 +49,12 @@ Adotaremos o Scrum e Kanban como metodologia ágil do projeto, com ênfase no us
 
 **Carga Horária Total para cada integrante:** 120 horas.
 
-**Divisão Inicial de Atribuições:**
-**Nome do Aluno 1:** Estruturação do HTML, repositório e documentação técnica.<br>
-**Nome do Aluno 2:** Estilização (CSS/Responsividade) e testes do site.<br>
-**Nome do Aluno 3:** Lógica JavaScript e arquitetura do website.<br>
-**Nome do Aluno 4:** Criação do material didático (roteiros das aulas, exercícios práticos).<br>
-**Nome do Aluno 5:** Produção audiovisual (Template de slides, gravação e edição das videoaulas).<br>
+**Divisão Inicial de Atribuições:**<br>
+**Gabriel Takao Ito da Rocha:** Estruturação do HTML, repositório e documentação técnica.<br>
+**Vinicius Campeão Fernandes:** Estilização (CSS/Responsividade) e testes do site.<br>
+**Paulo Felipe Zanatta:** Lógica JavaScript e arquitetura do website.<br>
+**Luiz Gustavo Garbelini:** Criação do material didático (roteiros das aulas, exercícios práticos).<br>
+**Adryann Luiz Lima de Oliveira Rosa:** Produção audiovisual (Template de slides, gravação e edição das videoaulas).<br>
 
 *Todos: Reuniões semanais e planejamento das tarefas no Trello*
 
