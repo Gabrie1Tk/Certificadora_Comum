@@ -76,3 +76,31 @@ Para manter a organização do repositório, adotaremos as seguintes regras esse
 - **Trello**: [Quadro do Projeto no Trello](https://trello.com/b/TFdywSYa)  
 
 - **GitHub Pages**: [Certificadora de Competência Comum - GitHub Pages](https://gabrie1tk.github.io/Certificadora_Comum/index)  
+
+## 7. Estrutura de Dados
+
+Os dados dos veículos exibidos no catálogo são consumidos dinamicamente de um arquivo estático JSON (`data/carros.json`). A estrutura de cada objeto de veículo segue o schema abaixo:
+
+| Campo       | Tipo   | Descrição                                                                 |
+| :---------- | :----- | :------------------------------------------------------------------------ |
+| `id`        | Number | Identificador único do veículo.                                           |
+| `nome`      | String | Nome/Modelo do veículo (ex: "Civic", "Corolla").                          |
+| `marca`     | String | Fabricante do veículo (ex: "Honda", "Toyota").                            |
+| `categoria` | String | Categoria para o filtro. Valores aceitos: `sedan`, `suv`, `hatch`, `esportivo`. |
+| `ano`       | Number | Ano do modelo (ex: 2023, 2024).                                           |
+| `preco`     | Number | Valor do veículo em Reais (R$), sem formatação (ex: 149900).              |
+| `imagem`    | String | Caminho relativo da imagem do veículo (ex: "assets/imgs/civic.jpg").      |
+| `descricao` | String | Breve resumo das especificações técnicas do veículo.                      |
+
+**Exemplo de Objeto JSON:**
+```json
+{
+  "id": 1,
+  "nome": "Civic",
+  "marca": "Honda",
+  "categoria": "sedan",
+  "ano": 2023,
+  "preco": 149900,
+  "imagem": "assets/imgs/civic.jpg",
+  "descricao": "Motor 1.5 turbo, câmbio CVT, 173 cv"
+}
