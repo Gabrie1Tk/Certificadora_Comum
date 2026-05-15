@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabarito - Aula 01 HTML</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <ul class="nav__links" role="list">
+        <li><a href="#apresentacao">Início</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="catalogo">
+      <h2>Catálogo de Carros</h2>
+
+      <article class="cartao">
+        <img src="../../assets/imgs/civic.jpg" alt="Foto lateral de um Honda Civic branco modelo 2023" class="cartao__imagem">
+        
+        <div class="cartao__corpo">
+          <p class="cartao__categoria">Sedan</p>
+          <h3 class="cartao__nome">Civic</h3>
+          <p class="cartao__marca">Honda - 2023</p>
+          <p class="cartao__preco">R$ 149.900</p>
+        </div>
+
+        <div class="cartao__rodape">
+          <button class="btn-favoritar" aria-label="Adicionar Civic aos favoritos">❤️</button>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>
