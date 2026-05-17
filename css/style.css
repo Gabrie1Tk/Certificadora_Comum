@@ -1,10 +1,3 @@
-/* ═══════════════════════════════════════════════════════════════
-   style.css — Oficina do Código
-   Paleta: Azul escuro + Vermelho + Cinza claro
-   Tipografia: Inter (corpo) + Poppins (títulos)
-═══════════════════════════════════════════════════════════════ */
-
-/* ── VARIÁVEIS ─────────────────────────────────────────────── */
 :root {
   /* Cores */
   --cor-primaria:    #1A1A2E;   /* Azul escuro — fundo hero e header */
@@ -170,8 +163,11 @@ ul, ol { list-style: none; }
 }
 
 /* ── HERO ──────────────────────────────────────────────────── */
-.hero {
+.hero-wrapper {
   background-color: var(--cor-primaria);
+}
+
+.hero {
   color: #fff;
   min-height: 90vh;
   display: flex;
@@ -544,7 +540,7 @@ ul, ol { list-style: none; }
   .nav__toggle { display: flex; }
 
   .trilha__lista { grid-template-columns: 1fr 1fr; }
-  .equipe { grid-template-columns: repeat(3, 1fr); }
+  .equipe { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile — até 480px */
@@ -554,4 +550,7 @@ ul, ol { list-style: none; }
   .equipe { grid-template-columns: 1fr 1fr; }
   .filtros { gap: 0.4rem; }
   .filtro { font-size: 0.78rem; padding: 0.4rem 0.85rem; }
+  .membro { min-width: 0; }
+  .membro__nome { font-size: 0.85rem; word-break: break-word; }
+  .membro__links { flex-wrap: wrap; justify-content: center; }
 }
