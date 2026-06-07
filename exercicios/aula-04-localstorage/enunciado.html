@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios - Aula 04 LocalStorage</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="../../index.html" class="nav__logo">← Voltar para a Oficina do Código</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="secao__titulo">Exercícios Práticos - Aula 04</h2>
+        <p class="secao__subtitulo">JavaScript: Persistência com LocalStorage</p>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 1: Inicializando os Favoritos</h3>
+          <p class="modulo__desc">
+            No início do seu script, crie uma variável para armazenar os favoritos. Utilize <code>localStorage.getItem('favoritos')</code> para buscar dados salvos anteriormente. Como o LocalStorage só guarda textos (strings), lembre-se de usar <code>JSON.parse()</code> para transformar o texto de volta em um array. Se não houver nada salvo, inicie um array vazio <code>[]</code>.
+          </p>
+        </article>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 2: Lógica de Adicionar e Remover</h3>
+          <p class="modulo__desc">
+            No evento de clique do botão "Favoritar", pegue o identificador do carro (usando um <code>data-id</code>). Verifique se este ID já existe no array de favoritos (usando <code>includes()</code> ou <code>indexOf()</code>). Se existir, remova-o. Se não existir, adicione-o ao array. Em seguida, salve o array atualizado usando <code>localStorage.setItem()</code> junto com <code>JSON.stringify()</code>.
+          </p>
+        </article>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 3: Atualizando a Interface</h3>
+          <p class="modulo__desc">
+            Crie uma função que atualiza o visual dos botões (ex: mudando o coração de branco para vermelho ou adicionando uma classe CSS) baseando-se no array de favoritos atual. Lembre-se de chamar essa função tanto quando a página carrega pela primeira vez, quanto toda vez que um usuário clica no botão de favoritar.
+          </p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

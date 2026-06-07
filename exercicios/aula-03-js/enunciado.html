@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios - Aula 03 JavaScript e DOM</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="../../index.html" class="nav__logo">← Voltar para a Oficina do Código</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="secao__titulo">Exercícios Práticos - Aula 03</h2>
+        <p class="secao__subtitulo">JavaScript: Manipulação do DOM e Eventos</p>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 1: Selecionando Elementos do DOM</h3>
+          <p class="modulo__desc">
+            No seu arquivo JavaScript, crie variáveis para capturar os elementos necessários para o nosso filtro. Utilize <code>document.querySelectorAll()</code> para selecionar todos os botões de filtro de categoria (ex: Sedan, SUV, Todos) e todos os cartões de carros presentes na página.
+          </p>
+        </article>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 2: Escutando Eventos de Clique</h3>
+          <p class="modulo__desc">
+            Faça um loop (como <code>forEach</code>) sobre os botões capturados no exercício anterior. Para cada botão, adicione um <code>addEventListener('click', funcao)</code>. Para testar, faça a função exibir um <code>console.log()</code> com o texto ou o valor do botão clicado.
+          </p>
+        </article>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 3: Lógica do Filtro em Tempo Real</h3>
+          <p class="modulo__desc">
+            Dentro do evento de clique, crie a lógica do filtro. Compare a categoria escolhida no botão com um atributo (ex: <code>data-categoria</code>) presente em cada cartão de carro. Se a categoria bater (ou se o botão for "Todos"), mostre o cartão. Caso contrário, oculte-o aplicando uma classe CSS (ex: <code>.oculto { display: none; }</code>).
+          </p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
