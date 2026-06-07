@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabarito - Aula 02 CSS e Layout</title>
+  
+  <style>
+    /* =========================================
+       GABARITO: RESOLUÇÕES DA AULA 02
+       ========================================= */
+
+    /* Reset básico para não interferir no layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+    }
+
+    /* -----------------------------------------
+       Exercício 1: Alinhamento com Flexbox
+       ----------------------------------------- */
+    .nav__links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none; /* Remove as bolinhas da lista */
+      background-color: #f1f5f9;
+      padding: 15px 30px;
+      border-radius: 8px;
+    }
+
+    .nav__links a {
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* -----------------------------------------
+       Exercício 2: Catálogo com CSS Grid
+       ----------------------------------------- */
+    .catalogo-grid {
+      display: grid;
+      /* Cria colunas flexíveis que se adaptam ao tamanho da tela */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; /* Respiro entre os cartões */
+      margin-top: 20px;
+    }
+
+    /* Estilização base do cartão para melhor visualização */
+    .cartao {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cartao__imagem {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    
+    .cartao__corpo {
+      flex-grow: 1; /* Empurra o rodapé para baixo se os textos tiverem tamanhos diferentes */
+    }
+
+    .cartao__rodape {
+      margin-top: 15px;
+      text-align: right;
+    }
+
+    /* -----------------------------------------
+       Exercício 3: Design Responsivo (Media Queries)
+       ----------------------------------------- */
+    @media (max-width: 768px) {
+      .nav__links {
+        /* Empilha os itens do menu em telas menores */
+        flex-direction: column;
+        gap: 15px; 
+      }
+      
+      /* Nota: O CSS Grid (no Ex 2) já lida com a responsividade dos 
+         cartões graças ao 'auto-fit' e 'minmax', não precisando de 
+         alteração na media query! */
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <ul class="nav__links" role="list">
+        <li><a href="#apresentacao">Início</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="catalogo" style="margin-top: 40px;">
+      <h2>Catálogo de Carros</h2>
+
+      <div class="catalogo-grid">
+        
+        <article class="cartao">
+          <img src="../../assets/imgs/civic.jpg" alt="Foto lateral de um Honda Civic branco modelo 2023" class="cartao__imagem">
+          
+          <div class="cartao__corpo">
+            <p class="cartao__categoria">Sedan</p>
+            <h3 class="cartao__nome">Civic</h3>
+            <p class="cartao__marca">Honda - 2023</p>
+            <p class="cartao__preco">R$ 149.900</p>
+          </div>
+
+          <div class="cartao__rodape">
+            <button class="btn-favoritar" aria-label="Adicionar Civic aos favoritos">❤️</button>
+          </div>
+        </article>
+
+        <article class="cartao">
+          <img src="../../assets/imgs/corolla.jpg" alt="Foto frontal de um Toyota Corolla prata" class="cartao__imagem">
+          
+          <div class="cartao__corpo">
+            <p class="cartao__categoria">Sedan</p>
+            <h3 class="cartao__nome">Corolla</h3>
+            <p class="cartao__marca">Toyota - 2023</p>
+            <p class="cartao__preco">R$ 155.000</p>
+          </div>
+
+          <div class="cartao__rodape">
+            <button class="btn-favoritar" aria-label="Adicionar Corolla aos favoritos">❤️</button>
+          </div>
+        </article>
+
+        <article class="cartao">
+          <img src="../../assets/imgs/compass.jpg" alt="Jeep Compass preto em estrada de terra" class="cartao__imagem">
+          
+          <div class="cartao__corpo">
+            <p class="cartao__categoria">SUV</p>
+            <h3 class="cartao__nome">Compass</h3>
+            <p class="cartao__marca">Jeep - 2023</p>
+            <p class="cartao__preco">R$ 180.500</p>
+          </div>
+
+          <div class="cartao__rodape">
+            <button class="btn-favoritar" aria-label="Adicionar Compass aos favoritos">❤️</button>
+          </div>
+        </article>
+
+      </div> </section>
+  </main>
+
+</body>
+</html>

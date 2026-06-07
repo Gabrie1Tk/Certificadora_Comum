@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios - Aula 02 CSS e Layout</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="../../index.html" class="nav__logo">← Voltar para a Oficina do Código</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="secao__titulo">Exercícios Práticos - Aula 02</h2>
+        <p class="secao__subtitulo">CSS, Flexbox, Grid e Responsividade</p>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 1: Alinhamento com Flexbox</h3>
+          <p class="modulo__desc">
+            Transforme o menu de navegação (criado na aula anterior) em um menu horizontal moderno. No seu arquivo CSS, selecione o contêiner da lista e aplique <code>display: flex;</code>. Utilize propriedades como <code>justify-content: space-between;</code> e <code>align-items: center;</code> para distribuir os itens de forma espaçada e alinhada.
+          </p>
+        </article>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 2: Catálogo de Carros com CSS Grid</h3>
+          <p class="modulo__desc">
+            Vamos organizar a exibição dos veículos. Envolva os cartões criados na Aula 01 em uma <code>div</code> principal e aplique <code>display: grid;</code>. Configure as colunas utilizando <code>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</code> para criar uma grelha flexível e adicione um respiro entre os itens com <code>gap: 20px;</code>.
+          </p>
+        </article>
+
+        <article class="modulo" style="margin-bottom: 2rem;">
+          <h3 class="modulo__titulo">Exercício 3: Design Responsivo com Media Queries</h3>
+          <p class="modulo__desc">
+            Garanta que o seu layout funcione perfeitamente em dispositivos móveis. Crie uma regra <code>@media (max-width: 768px)</code>. Dentro dela, ajuste o comportamento do Grid e do Flexbox para que, em telas menores, os cartões e os links de navegação fiquem empilhados em uma única coluna (ex: <code>flex-direction: column;</code>).
+          </p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
