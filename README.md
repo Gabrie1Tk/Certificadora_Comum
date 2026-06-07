@@ -2,7 +2,7 @@
 
 **Instituição:** Universidade Tecnológica Federal do Paraná (UTFPR) - Campus Cornélio Procópio <br>
 **Projeto:** Catálogo Automotivo Interativo (Front-End na Prática)<br>
-**Equipe:** Adryann Luiz, Gabriel Takao, Luiz Gustavo, Paulo Felipe, Vinicius Campeão<br>
+**Equipe:** Gabriel Takao, Luiz Gustavo, Paulo Felipe<br>
 
 ---
 
@@ -50,11 +50,9 @@ Adotaremos o Scrum e Kanban como metodologia ágil do projeto, com ênfase no us
 **Carga Horária Total para cada integrante:** 120 horas.
 
 **Divisão Inicial de Atribuições:**<br>
-**Gabriel Takao Ito da Rocha:** Estruturação do HTML, repositório e documentação técnica.<br>
-**Vinicius Campeão Fernandes:** Estilização (CSS/Responsividade) e testes do site.<br>
-**Paulo Felipe Zanatta:** Lógica JavaScript e arquitetura do website.<br>
-**Luiz Gustavo Garbelini:** Criação do material didático (roteiros das aulas, exercícios práticos).<br>
-**Adryann Luiz Lima de Oliveira Rosa:** Produção audiovisual (Template de slides, gravação e edição das videoaulas).<br>
+**Gabriel Takao Ito da Rocha:** Código e Estrutura<br>
+**Paulo Felipe Zanatta:** JavaScript e Arquitetura<br>
+**Luiz Gustavo Garbelini:** Conteúdo Didático e Audiovisual<br>
 
 *Todos: Reuniões semanais e planejamento das tarefas no Trello*
 
