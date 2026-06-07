@@ -436,8 +436,9 @@ ul, ol { list-style: none; }
 }
 
 .equipe {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: var(--gap-md);
 }
 
@@ -540,14 +541,12 @@ ul, ol { list-style: none; }
   .nav__toggle { display: flex; }
 
   .trilha__lista { grid-template-columns: 1fr 1fr; }
-  .equipe { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile — até 480px */
 @media (max-width: 480px) {
   .trilha__lista { grid-template-columns: 1fr; }
   .grade { grid-template-columns: 1fr; }
-  .equipe { grid-template-columns: 1fr 1fr; }
   .filtros { gap: 0.4rem; }
   .filtro { font-size: 0.78rem; padding: 0.4rem 0.85rem; }
   .membro { min-width: 0; }
