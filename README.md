@@ -1,96 +1,88 @@
-# Planejamento - Certificadora de Competência Comum
+# Oficina do Código — Catálogo Automotivo Interativo
 
-**Instituição:** Universidade Tecnológica Federal do Paraná (UTFPR) - Campus Cornélio Procópio <br>
-**Projeto:** Catálogo Automotivo Interativo (Front-End na Prática)<br>
-**Equipe:** Gabriel Takao, Luiz Gustavo, Paulo Felipe<br>
+> Recurso Educacional Aberto (REA) de Programação Web Front-End desenvolvido na
+> Universidade Tecnológica Federal do Paraná (UTFPR) — Campus Cornélio Procópio.
 
----
-
-## 1. Objetivos do Projeto
-
-**Objetivo Geral:**
-Desenvolver Recursos Educacionais Abertos (REA) voltados para a disciplina de Programação Web Front-End, proporcionando um aprendizado acessível e lúdico para interessados em programação.
-
-**Objetivos Específicos:**
-**Produzir Conteúdos Didáticos:** Criar vídeos educativos que expliquem os conceitos fundamentais da programação front-end, utilizando exemplos práticos e didáticos através da construção de um catálogo de carros.<br>
-**Desenvolver Material Interativo:** Elaborar um repositório de código-fonte que ilustre os conceitos abordados nos vídeos.<br>
-**Promover Aprendizado Lúdico:** Utilizar metodologias de ensino prático e visual para engajar no aprendizado e facilitar a compreensão de conceitos complexos.<br>
-**Fomentar a Colaboração e Divulgação:** Estimular o trabalho em equipe e compartilhar os materiais produzidos com o público em geral.<br>
+[![GitHub Pages](https://img.shields.io/badge/demo-online-brightgreen?style=flat-square)](https://gabrie1tk.github.io/Certificadora_Comum/)
+[![Licença](https://img.shields.io/badge/licença-MIT-blue?style=flat-square)](LICENSE)
+[![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-orange?style=flat-square)](#tecnologias)
 
 ---
 
-## 2. Escopo e Delimitação (Conteúdo e Formato)
+## Sobre o projeto
 
-O projeto abordará o desenvolvimento web focando nos padrões e tecnologias fundacionais de front-end. 
+O **Oficina do Código** ensina os fundamentos do desenvolvimento web front-end de forma prática e lúdica construindo, passo a passo, um catálogo interativo de carros.
 
-**Disciplinas e Tópicos Abordados:**
-**HTML e Semântica:** tecnologias fundacionais e arquitetura cliente-servidor , estruturação de páginas, acessibilidade na web e Search-Engine-Optimization (SEO).<br>
-**CSS e Design Responsivo:** Estilização visual com CSS 3.0 e uso de *Media-queries* para projetar o layout da aplicação para diferentes plataformas e dispositivos móveis.<br>
-**JavaScript e DOM:** Manipulação da página web e controle de eventos. Manipulação da página web (DOM), controle de eventos e APIs de persistência de dados no navegador web.<br>
+O projeto entrega duas coisas em paralelo:
 
-**Formato do REA:**
-O projeto entregará uma **Página Web** interativa hospedada no GitHub Pages e **Videoaulas** explicando a construção de cada funcionalidade lógica e visual.
+- **Um site funcional** o próprio catálogo de carros, construído aula a aula como exemplo concreto.
+- **Uma trilha de videoaulas e exercícios** que acompanha o aluno desde a estruturação do HTML até a persistência de dados com `localStorage`.
 
 ---
 
-## 3. Estrutura do Website
+## Tecnologias utilizadas
 
-O website será estruturado em uma única página, dividida em três seções principais: Apresentação, Conteúdo e Contato. Os usuários poderão navegar rolando a página ou utilizando a barra de navegação.
-
-**Apresentação:** Esta seção apresentará uma imagem chamativa do projeto (ambiente automotivo), acompanhada do título e um breve resumo descrevendo os objetivos.<br>
-**Conteúdo:** A plataforma guiará o usuário por uma trilha de aprendizado sequencial. O conteúdo será disponibilizado em ordem, dividindo o desenvolvimento em etapas lógicas. Em cada módulo, o usuário terá acesso a vídeo-aulas e exercícios práticos que o acompanharão passo a passo, desde a estruturação inicial do código até a finalização completa do site interativo do catálogo de carros.<br>
-**Contato:** Esta seção fornece informações sobre os criadores do site. Serão exibidos os nomes, além de links para os perfis do LinkedIn e GitHub de cada membro da equipe. <br>
-
----
-
-## 4. Metodologia e Planejamento de Horas
-
-Adotaremos o Scrum e Kanban como metodologia ágil do projeto, com ênfase no uso de sprints. O gerenciamento das tarefas será feito utilizando o Trello.
-
-**Carga Horária Total para cada integrante:** 120 horas.
-
-**Divisão Inicial de Atribuições:**<br>
-**Gabriel Takao Ito da Rocha:** Código e Estrutura<br>
-**Paulo Felipe Zanatta:** JavaScript e Arquitetura<br>
-**Luiz Gustavo Garbelini:** Conteúdo Didático e Audiovisual<br>
-
-*Todos: Reuniões semanais e planejamento das tarefas no Trello*
+| Tecnologia | Finalidade |
+|---|---|
+| HTML5 semântico | Estrutura e acessibilidade das páginas |
+| CSS3 + Flexbox/Grid | Estilização e layout responsivo |
+| Media Queries | Adaptação para dispositivos móveis |
+| JavaScript ES6+ | Filtros, eventos e manipulação do DOM |
+| localStorage API | Persistência de favoritos no navegador |
+| GitHub Pages | Hospedagem estática gratuita |
 
 ---
 
-## 5. Padrões de Projeto
+## Estrutura de pastas
 
-Para manter a organização do repositório, adotaremos as seguintes regras essenciais:
-
-**Nomenclatura:** Utilize sempre hifens para criar arquivos (ex: `catalogo-carros.html`). Ao criar pastas, dê preferência a apenas uma palavra ou utilize hifens. <br>
-**Commits:** Mensagens claras e descritivas usando verbos no imperativo.<br>
-*Exemplo:* `adicionar filtro de categorias em js`<br>
-**Tamanho dos Commits:** Realize commits pequenos e focados em uma única funcionalidade para facilitar revisões.
+```
+Certificadora_Comum/
+├── index.html
+├── README.md
+├── CONTRIBUTING.md
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── main.js
+│
+├── data/
+│   └── carros.json
+│
+├── assets/
+│   ├── imgs/
+│   ├── Aula 1 - SlideHtml.pdf
+│   ├── Aula 2 - SlideCss.pdf
+│   ├── Aula 3 - SlidesJS.pdf
+│   └── Aula 4 - SlidesLocalStorage.pdf
+│
+└── exercicios/
+    ├── aula-01-html/
+    │   └── enunciado.html
+    ├── aula-02-css/
+    │   └── enunciado.html
+    ├── aula-03-js/
+    │   └── enunciado.html
+    └── aula-04-localstorage/
+        └── enunciado.html
+```
 
 ---
 
-## 6. Links Importantes
+## Schema dos dados (`data/carros.json`)
 
-- **Trello**: [Quadro do Projeto no Trello](https://trello.com/b/TFdywSYa)  
+| Campo | Tipo | Descrição |
+|---|---|---|
+| `id` | Number | Identificador único do veículo |
+| `nome` | String | Nome/modelo do veículo |
+| `marca` | String | Fabricante do veículo |
+| `categoria` | String | `sedan` · `suv` · `hatch` · `esportivo` |
+| `ano` | Number | Ano do modelo |
+| `preco` | Number | Valor em reais sem formatação |
+| `imagem` | String | Caminho relativo da imagem |
+| `descricao` | String | Especificações técnicas resumidas |
 
-- **GitHub Pages**: [Certificadora de Competência Comum - GitHub Pages](https://gabrie1tk.github.io/Certificadora_Comum/index)  
-
-## 7. Estrutura de Dados
-
-Os dados dos veículos exibidos no catálogo são consumidos dinamicamente de um arquivo estático JSON (`data/carros.json`). A estrutura de cada objeto de veículo segue o schema abaixo:
-
-| Campo       | Tipo   | Descrição                                                                 |
-| :---------- | :----- | :------------------------------------------------------------------------ |
-| `id`        | Number | Identificador único do veículo.                                           |
-| `nome`      | String | Nome/Modelo do veículo (ex: "Civic", "Corolla").                          |
-| `marca`     | String | Fabricante do veículo (ex: "Honda", "Toyota").                            |
-| `categoria` | String | Categoria para o filtro. Valores aceitos: `sedan`, `suv`, `hatch`, `esportivo`. |
-| `ano`       | Number | Ano do modelo (ex: 2023, 2024).                                           |
-| `preco`     | Number | Valor do veículo em Reais (R$), sem formatação (ex: 149900).              |
-| `imagem`    | String | Caminho relativo da imagem do veículo (ex: "assets/imgs/civic.jpg").      |
-| `descricao` | String | Breve resumo das especificações técnicas do veículo.                      |
-
-**Exemplo de Objeto JSON:**
 ```json
 {
   "id": 1,
@@ -102,3 +94,57 @@ Os dados dos veículos exibidos no catálogo são consumidos dinamicamente de um
   "imagem": "assets/imgs/civic.jpg",
   "descricao": "Motor 1.5 turbo, câmbio CVT, 173 cv"
 }
+```
+
+
+## Trilha de aprendizado
+
+| Módulo | Tema | Videoaula | Exercícios |
+|---|---|---|---|
+| Aula 1 | HTML e Semântica | [Assistir](https://youtu.be/AfQioOnekYE) | [Ver exercícios](exercicios/aula-01-html/enunciado.html) |
+| Aula 2 | CSS e Layout | [Assistir](https://youtu.be/h7RREJRGDv0) | [Ver exercícios](exercicios/aula-02-css/enunciado.html) |
+| Aula 3 | JavaScript e DOM | [Assistir](https://youtu.be/2o-5z9Ykgm4) | [Ver exercícios](exercicios/aula-03-js/enunciado.html) |
+| Aula 4 | localStorage | [Assistir](https://youtu.be/ffDIVp9jocE) | [Ver exercícios](exercicios/aula-04-localstorage/enunciado.html) |
+
+---
+
+## Funcionalidades do catálogo
+
+- Listagem de 8 veículos com cartões visuais
+- Filtro por categoria em tempo real (sedã, SUV, hatch, esportivo)
+- Sistema de favoritos com persistência via `localStorage`
+- Modal de vídeo ativado por thumbnail clicável
+- Download dos slides de cada aula em PDF
+- Layout responsivo para desktop, tablet e mobile
+- Navegação suave entre seções
+
+---
+
+## Equipe
+
+| Membro | Função | GitHub | LinkedIn |
+|---|---|---|---|
+| Gabriel Takao Ito da Rocha | HTML, Semântica e Documentação | [@Gabrie1Tk](https://github.com/Gabrie1Tk) | [LinkedIn](https://www.linkedin.com/in/gabrieltakaoito) |
+| Luiz Gustavo Garbelini | Material Didático e Testes | [@LuizGustavo2105](https://github.com/LuizGustavo2105) | [LinkedIn](https://www.linkedin.com/in/luiz-gustavo-garbelini-ramos-8a9784318/) |
+| Paulo Felipe Zanatta | JavaScript, DOM e Arquitetura | [@paulozanatta](https://github.com/paulozanatta) | [LinkedIn](https://www.linkedin.com/in/paulo-felipe-zanatta-dos-santos-90ab89283/) |
+
+---
+
+## Metodologia
+
+Projeto desenvolvido com **Scrum + Kanban** em sprints.
+Gestão no [Trello](https://trello.com/b/TFdywSYa/oficina-do-codigo-certificadora-de-competencia-comum).
+
+**Padrões de commit:**
+
+```
+feat:     nova funcionalidade
+fix:      correção de bug
+docs:     documentação
+style:    estilo visual (sem lógica)
+refactor: refatoração de código
+```
+
+---
+
+<p align="center">Feito com dedicação na UTFPR — Campus Cornélio Procópio · 2025</p>
