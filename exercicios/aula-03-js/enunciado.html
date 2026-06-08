@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -29,6 +30,18 @@
           <p class="modulo__desc">
             No seu arquivo JavaScript, crie variáveis para capturar os elementos necessários para o nosso filtro. Utilize <code>document.querySelectorAll()</code> para selecionar todos os botões de filtro de categoria (ex: Sedan, SUV, Todos) e todos os cartões de carros presentes na página.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-javascript">// Exercício 1: Selecionando Elementos do DOM
+const botoesFiltro = document.querySelectorAll('.btn-filtro');
+const cartoes = document.querySelectorAll('.cartao');</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -36,6 +49,29 @@
           <p class="modulo__desc">
             Faça um loop (como <code>forEach</code>) sobre os botões capturados no exercício anterior. Para cada botão, adicione um <code>addEventListener('click', funcao)</code>. Para testar, faça a função exibir um <code>console.log()</code> com o texto ou o valor do botão clicado.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-javascript">// Exercício 2: Escutando Eventos de Clique
+botoesFiltro.forEach(botao =&gt; {
+  botao.addEventListener('click', () =&gt; {
+    
+    // Remove a classe 'ativo' de todos os botões e adiciona no clicado
+    botoesFiltro.forEach(btn =&gt; btn.classList.remove('ativo'));
+    botao.classList.add('ativo');
+
+    // Captura o valor que queremos filtrar a partir do data-attribute do botão
+    const categoriaEscolhida = botao.getAttribute('data-filtro');
+    
+    console.log("Categoria escolhida:", categoriaEscolhida);
+  });
+});</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -43,11 +79,35 @@
           <p class="modulo__desc">
             Dentro do evento de clique, crie a lógica do filtro. Compare a categoria escolhida no botão com um atributo (ex: <code>data-categoria</code>) presente em cada cartão de carro. Se a categoria bater (ou se o botão for "Todos"), mostre o cartão. Caso contrário, oculte-o aplicando uma classe CSS (ex: <code>.oculto { display: none; }</code>).
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-javascript">// Exercício 3: Lógica do Filtro em Tempo Real
+// (Este código vai dentro do evento de clique, logo abaixo da lógica do Exercício 2)
+
+cartoes.forEach(cartao =&gt; {
+  const categoriaDoCartao = cartao.getAttribute('data-categoria');
+
+  // Se escolheu "todos" ou se a categoria do cartão for igual à escolhida
+  if (categoriaEscolhida === 'todos' || categoriaEscolhida === categoriaDoCartao) {
+    cartao.classList.remove('oculto'); // Mostra o cartão
+  } else {
+    cartao.classList.add('oculto'); // Esconde o cartão
+  }
+});</code></pre>
+            </div>
+          </details>
         </article>
 
       </div>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 </body>
 </html>

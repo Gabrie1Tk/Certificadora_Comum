@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   carregarCarros();
   iniciarNavMobile();
   iniciarFiltros();
+  iniciarModal();
 });
 
 async function carregarCarros() {
@@ -149,4 +150,36 @@ function iniciarNavMobile() {
 
 function formatarPreco(valor) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+}
+
+function iniciarModal() {
+  const modal = document.getElementById("meuModal");
+  const iframe = document.getElementById("videoIframe");
+  const btnFechar = document.querySelector(".modal__fechar");
+  const botoesAbrir = document.querySelectorAll(".abrir-modal");
+
+  if (!modal || !iframe) return; 
+
+  botoesAbrir.forEach(botao => {
+    botao.addEventListener("click", function() {
+      const urlDoVideo = this.getAttribute("data-url");
+      iframe.src = urlDoVideo;
+      modal.style.display = "flex";
+    });
+  });
+
+  function fecharModal() {
+    modal.style.display = "none";
+    iframe.src = ""; 
+  }
+
+  if (btnFechar) {
+    btnFechar.addEventListener("click", fecharModal);
+  }
+
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      fecharModal();
+    }
+  });
 }

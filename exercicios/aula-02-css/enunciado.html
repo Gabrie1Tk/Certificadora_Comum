@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -29,6 +30,31 @@
           <p class="modulo__desc">
             Transforme o menu de navegação (criado na aula anterior) em um menu horizontal moderno. No seu arquivo CSS, selecione o contêiner da lista e aplique <code>display: flex;</code>. Utilize propriedades como <code>justify-content: space-between;</code> e <code>align-items: center;</code> para distribuir os itens de forma espaçada e alinhada.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-css">/* Exercício 1: Alinhamento com Flexbox */
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* Remove as bolinhas da lista */
+  background-color: #f1f5f9;
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+}</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -36,6 +62,32 @@
           <p class="modulo__desc">
             Vamos organizar a exibição dos veículos. Envolva os cartões criados na Aula 01 em uma <code>div</code> principal e aplique <code>display: grid;</code>. Configure as colunas utilizando <code>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</code> para criar uma grelha flexível e adicione um respiro entre os itens com <code>gap: 20px;</code>.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-css">/* Exercício 2: Catálogo com CSS Grid */
+.catalogo-grid {
+  display: grid;
+  /* Cria colunas flexíveis que se adaptam ao tamanho da tela */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Respiro entre os cartões */
+  margin-top: 20px;
+}
+
+/* Estilização base do cartão para melhor visualização */
+.cartao {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -43,11 +95,34 @@
           <p class="modulo__desc">
             Garanta que o seu layout funcione perfeitamente em dispositivos móveis. Crie uma regra <code>@media (max-width: 768px)</code>. Dentro dela, ajuste o comportamento do Grid e do Flexbox para que, em telas menores, os cartões e os links de navegação fiquem empilhados em uma única coluna (ex: <code>flex-direction: column;</code>).
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-css">/* Exercício 3: Design Responsivo (Media Queries) */
+@media (max-width: 768px) {
+  .nav__links {
+    /* Empilha os itens do menu em telas menores */
+    flex-direction: column;
+    gap: 15px; 
+  }
+  
+  /* Nota: O CSS Grid (no Ex 2) já lida com a responsividade dos 
+     cartões graças ao 'auto-fit' e 'minmax', não precisando de 
+     alteração na media query! */
+}</code></pre>
+            </div>
+          </details>
         </article>
 
       </div>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 </body>
 </html>

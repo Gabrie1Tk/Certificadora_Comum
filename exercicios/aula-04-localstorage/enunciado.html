@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -29,6 +30,19 @@
           <p class="modulo__desc">
             No início do seu script, crie uma variável para armazenar os favoritos. Utilize <code>localStorage.getItem('favoritos')</code> para buscar dados salvos anteriormente. Como o LocalStorage só guarda textos (strings), lembre-se de usar <code>JSON.parse()</code> para transformar o texto de volta em um array. Se não houver nada salvo, inicie um array vazio <code>[]</code>.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-javascript">// EXERCÍCIO 1: Inicializando os Favoritos
+// Tenta buscar o texto no localStorage. Se existir, converte para array (JSON.parse).
+// Se retornar null, inicia um array vazio usando o operador || (ou).
+let favoritos = JSON.parse(localStorage.getItem('carrosFavoritos')) || [];</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -36,6 +50,41 @@
           <p class="modulo__desc">
             No evento de clique do botão "Favoritar", pegue o identificador do carro (usando um <code>data-id</code>). Verifique se este ID já existe no array de favoritos (usando <code>includes()</code> ou <code>indexOf()</code>). Se existir, remova-o. Se não existir, adicione-o ao array. Em seguida, salve o array atualizado usando <code>localStorage.setItem()</code> junto com <code>JSON.stringify()</code>.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-javascript">// Seleciona todos os botões de favoritar
+const botoesFavoritar = document.querySelectorAll('.btn-favoritar');
+
+// EXERCÍCIO 2: Lógica de Adicionar e Remover
+botoesFavoritar.forEach(botao =&gt; {
+  botao.addEventListener('click', () =&gt; {
+    const idCarro = botao.getAttribute('data-id');
+
+    // Verifica a posição do carro no array (-1 significa que não encontrou)
+    const index = favoritos.indexOf(idCarro);
+
+    if (index === -1) {
+      // Não está nos favoritos, então adicionamos
+      favoritos.push(idCarro);
+    } else {
+      // Já está nos favoritos, então removemos (corta 1 item na posição 'index')
+      favoritos.splice(index, 1);
+    }
+
+    // Salva o array atualizado no LocalStorage convertendo para texto (JSON.stringify)
+    localStorage.setItem('carrosFavoritos', JSON.stringify(favoritos));
+
+    // Atualiza a tela para refletir as mudanças imediatamente
+    atualizarInterfaceFavoritos();
+  });
+});</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -43,11 +92,38 @@
           <p class="modulo__desc">
             Crie uma função que atualiza o visual dos botões (ex: mudando o coração de branco para vermelho ou adicionando uma classe CSS) baseando-se no array de favoritos atual. Lembre-se de chamar essa função tanto quando a página carrega pela primeira vez, quanto toda vez que um usuário clica no botão de favoritar.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-javascript">// EXERCÍCIO 3: Atualizando a Interface
+function atualizarInterfaceFavoritos() {
+  botoesFavoritar.forEach(botao =&gt; {
+    const idCarro = botao.getAttribute('data-id');
+    
+    // Verifica se o ID deste botão está no array de favoritos
+    if (favoritos.includes(idCarro)) {
+      botao.classList.add('favoritado');
+    } else {
+      botao.classList.remove('favoritado');
+    }
+  });
+}
+
+// Chama a função logo que a página carrega para pintar os botões corretamente
+atualizarInterfaceFavoritos();</code></pre>
+            </div>
+          </details>
         </article>
 
       </div>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 </body>
 </html>

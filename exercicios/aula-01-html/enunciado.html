@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -30,14 +31,53 @@
             Cria um menu de navegação para a tua página utilizando a tag semântica correta. 
             Cria uma lista não ordenada com pelo menos três links (Ex: Início, Catálogo, Contato) que apontem para IDs dentro da própria página (ex: <code>href="#catalogo"</code>).
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-html">&lt;nav class="nav" aria-label="Navegação principal"&gt;
+  &lt;ul class="nav__links" role="list"&gt;
+    &lt;li&gt;&lt;a href="#apresentacao"&gt;Início&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#catalogo"&gt;Catálogo&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
           <h3 class="modulo__titulo">Exercício 2: Estrutura Semântica do Cartão</h3>
+          
           <p class="modulo__desc">
-            Vamos estruturar o cartão de um carro. Utiliza a tag ideal para conteúdos independentes (<code>article</code>) para englobar o cartão. 
-            Insere uma imagem, um título (nome do carro), parágrafos para marca, ano e preço, e um botão de "Favoritar".
+            Vamos estruturar o cartão de um carro. Utiliza a tag ideal para conteúdos independentes (<code>&lt;article&gt;</code>) para englobar o cartão. Insere uma imagem, um título (nome do carro), parágrafos para marca, ano e preço, e um botão de "Favoritar".
           </p>
+          
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-html">&lt;article class="cartao"&gt;
+            &lt;img src="../../assets/imgs/civic.jpg" alt="Foto lateral de um Honda Civic branco modelo 2023" class="cartao__imagem"&gt;
+            
+            &lt;div class="cartao__corpo"&gt;
+              &lt;p class="cartao__categoria"&gt;Sedan&lt;/p&gt;
+              &lt;h3 class="cartao__nome"&gt;Civic&lt;/h3&gt;
+              &lt;p class="cartao__marca"&gt;Honda - 2023&lt;/p&gt;
+              &lt;p class="cartao__preco"&gt;R$ 149.900&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="cartao__rodape"&gt;
+              &lt;button class="btn-favoritar" aria-label="Adicionar Civic aos favoritos"&gt;❤️&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;</code></pre>
+            </div>
+          </details>
         </article>
 
         <article class="modulo" style="margin-bottom: 2rem;">
@@ -45,11 +85,27 @@
           <p class="modulo__desc">
             Aprimora o HTML do cartão criado. Adiciona o atributo <code>alt</code> na imagem do carro para leitores de ecrã e o atributo <code>aria-label</code> no botão de "Favoritar", descrevendo a ação do ícone.
           </p>
+
+          <details class="gabarito-expansivel" style="margin-top: 1rem;">
+            <summary class="btn btn--secundario" style="cursor: pointer; list-style: none;">
+              Ver Gabarito
+            </summary>
+            
+            <div style="margin-top: 1rem;">
+              <pre><code class="language-html">&lt;!-- Imagem com atributo alt descritivo --&gt;
+&lt;img src="../../assets/imgs/civic.jpg" alt="Foto lateral de um Honda Civic branco modelo 2023" class="cartao__imagem"&gt;
+
+&lt;!-- Botão com atributo aria-label para leitores de tela --&gt;
+&lt;button class="btn-favoritar" aria-label="Adicionar Civic aos favoritos"&gt;❤️&lt;/button&gt;</code></pre>
+            </div>
+          </details>
         </article>
 
       </div>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Oficina do Código — Aprenda programação web front-end construindo um catálogo interativo de carros." />
+    <meta name="description" content="Oficina do Código Aprenda programação web front-end construindo um catálogo interativo de carros." />
     <title>Oficina do Código | Catálogo Automotivo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +39,7 @@
             <span class="hero__destaque">de carros do zero</span>
           </h1>
           <p class="hero__subtitulo">
-            HTML, CSS e JavaScript na prática — com videoaulas, exercícios e código aberto.
+            HTML, CSS e JavaScript na prática com videoaulas, exercícios e código aberto.
           </p>
           <a href="#conteudo" class="btn btn--primario">Começar agora</a>
         </div>
@@ -50,7 +50,7 @@
       <section id="conteudo" class="trilha" aria-labelledby="trilha-titulo">
         <div class="container">
           <h2 id="trilha-titulo" class="secao__titulo">Trilha de aprendizado</h2>
-          <p class="secao__subtitulo">Quatro módulos sequenciais — do zero ao catálogo completo.</p>
+          <p class="secao__subtitulo">Quatro módulos sequenciais do zero ao catálogo completo.</p>
 
           <ol class="trilha__lista" role="list">
 
@@ -60,12 +60,19 @@
                 <h3 id="mod1-titulo" class="modulo__titulo">HTML e Semântica</h3>
                 <p class="modulo__desc">Estrutura de páginas, tags semânticas, acessibilidade e SEO.</p>
                 <div class="modulo__video">
-                  <div class="video__placeholder" aria-label="Vídeo da Aula 1 em breve">Em breve</div>
+                  <div class="capa-video abrir-modal" data-url="https://www.youtube.com/embed/AfQioOnekYE">
+                    <img src="https://img.youtube.com/vi/AfQioOnekYE/hqdefault.jpg" alt="Assistir Aula 01">
+                    <div class="capa-video__play">▶</div>
+                  </div>
                 </div>
-                <a href="exercicios/aula-01-html/enunciado.html" class="btn btn--secundario">
-                  Ver exercícios
-                </a>
-              </div>
+                <div class="modulo__acoes">
+                  <a href="exercicios/aula-01-html/enunciado.html" class="btn btn--secundario">
+                    Ver exercícios
+                  </a>
+                  <a href="assets/Aula 1 - SlideHtml.pdf" class="link-download" download>
+                    Baixar PDF
+                  </a>
+                </div>
             </article>
 
             <article class="modulo" aria-labelledby="mod2-titulo">
@@ -74,12 +81,19 @@
                 <h3 id="mod2-titulo" class="modulo__titulo">CSS e Layout</h3>
                 <p class="modulo__desc">Estilização, Flexbox, Grid e design responsivo com media queries.</p>
                 <div class="modulo__video">
-                  <div class="video__placeholder" aria-label="Vídeo da Aula 2 em breve">Em breve</div>
+                  <div class="capa-video abrir-modal" data-url="https://www.youtube.com/embed/h7RREJRGDv0">
+                    <img src="https://img.youtube.com/vi/h7RREJRGDv0/hqdefault.jpg" alt="Assistir Aula 02">
+                    <div class="capa-video__play">▶</div>
+                  </div>
                 </div>
-                <a href="exercicios/aula-02-css/enunciado.html" class="btn btn--secundario">
-                  Ver exercícios
-                </a>
-              </div>
+                <div class="modulo__acoes">
+                  <a href="exercicios/aula-02-css/enunciado.html" class="btn btn--secundario">
+                    Ver exercícios
+                  </a>
+                  <a href="assets/Aula 2 - SlideCss.pdf" class="link-download" download>
+                    Baixar PDF
+                  </a>
+                </div>
             </article>
 
             <article class="modulo" aria-labelledby="mod3-titulo">
@@ -88,25 +102,43 @@
                 <h3 id="mod3-titulo" class="modulo__titulo">JavaScript e DOM</h3>
                 <p class="modulo__desc">Manipulação do DOM, eventos e filtro de categorias em tempo real.</p>
                 <div class="modulo__video">
-                  <div class="video__placeholder" aria-label="Vídeo da Aula 3 em breve">Em breve</div>
+                  <div class="capa-video abrir-modal" data-url="https://www.youtube.com/embed/2o-5z9Ykgm4">
+                    <img src="https://img.youtube.com/vi/2o-5z9Ykgm4/hqdefault.jpg" alt="Assistir Aula 03">
+                    <div class="capa-video__play">▶</div>
+                  </div>
                 </div>
-                <a href="exercicios/aula-03-js/enunciado.html" class="btn btn--secundario">
-                  Ver exercícios
-                </a>
+                <div class="modulo__acoes">
+                  <a href="exercicios/aula-03-js/enunciado.html" class="btn btn--secundario">
+                    Ver exercícios
+                  </a>
+                  <a href="assets/Aula 3 - SlideJs.pdf" class="link-download" download>
+                    Baixar PDF
+                  </a>
+                </div>
               </div>
             </article>
 
             <article class="modulo" aria-labelledby="mod4-titulo">
               <div class="modulo__numero" aria-hidden="true">04</div>
               <div class="modulo__corpo">
-                <h3 id="mod4-titulo" class="modulo__titulo">localStorage</h3>
-                <p class="modulo__desc">Persistência de dados no navegador — favoritos que não somem.</p>
+                <h3 id="mod4-titulo" class="modulo__titulo">LocalStorage</h3>
+                <p class="modulo__desc">Persistência de dados no navegador favoritos que não somem.</p>
                 <div class="modulo__video">
-                  <div class="video__placeholder" aria-label="Vídeo da Aula 4 em breve">Em breve</div>
+                  <div class="capa-video abrir-modal" data-url="https://www.youtube.com/embed/ffDIVp9jocE">
+                    <img src="https://img.youtube.com/vi/ffDIVp9jocE/hqdefault.jpg" alt="Assistir Aula 04">
+                    <div class="capa-video__play">▶</div>
+                  </div>
                 </div>
-                <a href="exercicios/aula-04-localstorage/enunciado.html" class="btn btn--secundario">
-                  Ver exercícios
-                </a>
+                </div>
+                <div class="modulo__acoes">
+                  <a href="exercicios/aula-04-localstorage/enunciado.html" class="btn btn--secundario">
+                    Ver exercícios
+                  </a>
+                  <a href="assets/Aula 4 - SlideLocalstorage.pdf" class="link-download" download>
+                    Baixar PDF
+                  </a>
+                </div>
+                </div>
               </div>
             </article>
 
@@ -140,7 +172,7 @@
       <section id="contato" class="contato" aria-labelledby="contato-titulo">
         <div class="container">
           <h2 id="contato-titulo" class="secao__titulo">Equipe</h2>
-          <p class="secao__subtitulo">Desenvolvido por estudantes da UTFPR — Campus Cornélio Procópio.</p>
+          <p class="secao__subtitulo">Desenvolvido por estudantes da UTFPR Campus Cornélio Procópio.</p>
 
           <ul class="equipe" role="list">
 
@@ -173,6 +205,15 @@
           </ul>
         </div>
       </section>
+    
+      <div id="meuModal" class="modal">
+        <div class="modal__conteudo">
+          <span class="modal__fechar" aria-label="Fechar vídeo">&times;</span>
+          <div class="video-responsivo">
+            <iframe id="videoIframe" src="" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
 
     </main>
 
