@@ -482,6 +482,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-titulo);
   font-size: 1.1rem;
   font-weight: 700;
+  object-fit: cover;
 }
 
 .membro__nome {
